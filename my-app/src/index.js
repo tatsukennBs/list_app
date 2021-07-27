@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './index.css';
   // class Square extends React.Component {
 
@@ -13,6 +14,16 @@ import './index.css';
   //     );
   //   }
   // }
+  function App(){
+    <BrowserRouter>
+      <Route path="/">
+        <Game/>
+      </Route>
+      {/* <Route path="/tutorial">
+        <Tutorial/>
+      </Route> */}
+    </BrowserRouter>
+  }
   function Square(props) {
     return (
       <button className="square" onClick={props.onClick}>
@@ -139,6 +150,7 @@ import './index.css';
   
   // ========================================
   
+  /* GameのjsxをHTMLに変換している */
   ReactDOM.render(
     <Game />,
     document.getElementById('root')
